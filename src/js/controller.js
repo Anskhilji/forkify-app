@@ -11,9 +11,6 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import {async} from 'regenerator-runtime';
 
-if (module.hot) {
-    module.hot.accept();
-}
 // https://forkify-api.herokuapp.com/v2
 
 /////////////////////////////////
@@ -132,9 +129,7 @@ const controlAddRecipe = async function (newRecipe) {
     }
 
 }
-const newFeature = function (){
-    console.log('Welcome to the application');
-}
+
 const init = function () {
     bookmarksView.addHandlerRender(controlBookMarks);
     recipeView.addHandlerRender(recipeControl);
@@ -144,6 +139,5 @@ const init = function () {
     paginationView.addHandlerClick(controlPagination);
     addRecipeView.addHandlerUpload(controlAddRecipe);
     console.log('Welcome');
-    newFeature();
 };
 init();
